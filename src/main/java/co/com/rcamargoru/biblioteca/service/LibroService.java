@@ -38,6 +38,7 @@ public class LibroService {
     //Metodo para crear libro
     public LibroResponseDTO crearLibro(LibroRequestDTO request) {
         Libro nuevoLibro = new Libro();
+        nuevoLibro.setIsbn(request.getIsbn());
         nuevoLibro.setTitulo(request.getTitulo());
         Autor autor = autorRepository.findById(request.getAutorId())
                 .orElseThrow(() -> new RuntimeException("Autor no encontrado"));
@@ -61,6 +62,7 @@ public class LibroService {
         Genero genero = generoRepository.findById(request.getGeneroId())
                 .orElseThrow(() -> new RuntimeException("Genero no encontrado"));
         actualizaLibro.setGenero(genero);
+        actualizaLibro.setIsbn(request.getIsbn());
         actualizaLibro.setStock(request.getStock());
         actualizaLibro.setEstado(request.getEstado());
         Libro actualizado = libroRepository.save(actualizaLibro);
@@ -92,6 +94,7 @@ public class LibroService {
     private LibroResponseDTO mapToResponseDto(Libro libro) {
         LibroResponseDTO dto = new LibroResponseDTO();
         dto.setId(libro.getId());
+        dto.setIsbn(libro.getIsbn());
         dto.setTitulo(libro.getTitulo());
         dto.setAutorNombre(libro.getAutor().getNombre());
         dto.setGeneroNombre(libro.getGenero().getNombre());

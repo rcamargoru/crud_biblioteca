@@ -2,36 +2,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package co.com.rcamargoru.biblioteca.dto;
+package co.com.rcamargoru.biblioteca.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.util.Date;
-
-
 
 /**
  *
  * @author Administrador
  */
-public class AutorResponseDTO {
-
-    private long id;
+@Entity
+@Table(name = "usuario")
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nombre;
+    private Long documento;
     private Date fechaNacimiento;
-    private String genero;
-    private String pais;
-    private Boolean estado;
-
+    private Boolean estado;  
     /**
      * @return the id
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -50,6 +54,20 @@ public class AutorResponseDTO {
     }
 
     /**
+     * @return the documento
+     */
+    public Long getDocumento() {
+        return documento;
+    }
+
+    /**
+     * @param documento the documento to set
+     */
+    public void setDocumento(Long documento) {
+        this.documento = documento;
+    }
+
+    /**
      * @return the fechaNacimiento
      */
     public Date getFechaNacimiento() {
@@ -61,34 +79,6 @@ public class AutorResponseDTO {
      */
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
-    }
-
-    /**
-     * @return the genero
-     */
-    public String getGenero() {
-        return genero;
-    }
-
-    /**
-     * @param genero the genero to set
-     */
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    /**
-     * @return the pais
-     */
-    public String getPais() {
-        return pais;
-    }
-
-    /**
-     * @param pais the pais to set
-     */
-    public void setPais(String pais) {
-        this.pais = pais;
     }
 
     /**
@@ -105,4 +95,5 @@ public class AutorResponseDTO {
         this.estado = estado;
     }
 
+  
 }

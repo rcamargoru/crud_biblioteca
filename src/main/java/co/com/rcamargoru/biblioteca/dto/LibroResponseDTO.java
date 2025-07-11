@@ -15,6 +15,7 @@ public class LibroResponseDTO {
     private String autorNombre;
     private String generoNombre;
     private int stock;
+    private String isbn;
     private Boolean estado;
 
     /**
@@ -57,6 +58,20 @@ public class LibroResponseDTO {
      */
     public void setAutorNombre(String autorNombre) {
         this.autorNombre = autorNombre;
+    }
+
+    /**
+     * @return the isbn
+     */
+    public String getIsbn() {
+        return isbn;
+    }
+
+    /**
+     * @param isbn the isbn to set
+     */
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     /**

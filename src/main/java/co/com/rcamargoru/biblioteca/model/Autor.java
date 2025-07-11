@@ -5,20 +5,21 @@
 package co.com.rcamargoru.biblioteca.model;
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 /**
  *
  * @author Administrador
  */
 @Entity
+@Table(name = "autores")
 public class Autor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
-    private LocalDate fechaNacimiento;
+    private Date fechaNacimiento;
     private String genero;
     private String pais;
     private Boolean estado;
@@ -54,14 +55,14 @@ public class Autor {
     /**
      * @return the fechaNacimiento
      */
-    public LocalDate getFechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
     /**
      * @param fechaNacimiento the fechaNacimiento to set
      */
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

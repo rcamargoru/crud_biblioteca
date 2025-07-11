@@ -11,6 +11,7 @@ package co.com.rcamargoru.biblioteca.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "genero")
 public class Genero {
 
     @Id

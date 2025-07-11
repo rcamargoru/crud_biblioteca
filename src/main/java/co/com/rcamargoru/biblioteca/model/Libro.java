@@ -9,14 +9,17 @@ package co.com.rcamargoru.biblioteca.model;
  * @author Administrador
  */
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
+@Table(name = "libro", uniqueConstraints = {
+    @UniqueConstraint(columnNames = "isbn")
+})
 public class Libro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
 
     @ManyToOne
@@ -27,9 +30,26 @@ public class Libro {
     @JoinColumn(name = "genero_id")
     private Genero genero;
 
+    @NotBlank
+    @Column(unique = true)
+    private String isbn;
+    
     private int stock;
-
     private Boolean estado;
+
+    /**
+     * @return the isbn
+     */
+    public String getIsbn() {
+        return isbn;
+    }
+
+    /**
+     * @param isbn the isbn to set
+     */
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
     /**
      * @return the id

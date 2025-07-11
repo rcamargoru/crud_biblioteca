@@ -6,19 +6,17 @@ package co.com.rcamargoru.biblioteca.dto;
 
 import java.util.Date;
 
-
-
 /**
  *
  * @author Administrador
  */
-public class AutorRequestDTO {
+public class UsuarioRequestDTO {
 
     private String nombre;
+    private Long documento;
     private Date fechaNacimiento;
-    private String genero;
-    private String pais;
-    private Boolean estado;     
+    private Boolean estado;
+
     /**
      * @return the nombre
      */
@@ -31,6 +29,20 @@ public class AutorRequestDTO {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    /**
+     * @return the documento
+     */
+    public Long getDocumento() {
+        return documento;
+    }
+
+    /**
+     * @param documento the documento to set
+     */
+    public void setDocumento(Long documento) {
+        this.documento = documento;
     }
 
     /**
@@ -48,34 +60,6 @@ public class AutorRequestDTO {
     }
 
     /**
-     * @return the genero
-     */
-    public String getGenero() {
-        return genero;
-    }
-
-    /**
-     * @param genero the genero to set
-     */
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    /**
-     * @return the pais
-     */
-    public String getPais() {
-        return pais;
-    }
-
-    /**
-     * @param pais the pais to set
-     */
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
-    /**
      * @return the estado
      */
     public Boolean getEstado() {
@@ -88,5 +72,5 @@ public class AutorRequestDTO {
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
-   
+
 }

@@ -4,8 +4,6 @@
  */
 package co.com.rcamargoru.biblioteca.dto;
 
-import co.com.rcamargoru.biblioteca.model.Autor;
-
 /**
  *
  * @author Administrador
@@ -17,6 +15,7 @@ public class LibroRequestDTO {
     private Long autorId;
     private Long generoId;
     private int stock;
+    private String isbn;
     private Boolean estado;
 
     /**
@@ -38,6 +37,20 @@ public class LibroRequestDTO {
      */
     public Long getAutorId() {
         return autorId;
+    }
+
+    /**
+     * @return the isbn
+     */
+    public String getIsbn() {
+        return isbn;
+    }
+
+    /**
+     * @param isbn the isbn to set
+     */
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     /**
