@@ -16,6 +16,7 @@ import java.util.Date;
 /**
  *
  * @author Administrador
+ * Entidad Prestamo
  */
 @Entity
 @Table(name = "prestamos")

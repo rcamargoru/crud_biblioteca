@@ -9,6 +9,7 @@ import java.util.Date;
 /**
  *
  * @author Administrador
+ * clase intermedia para no depender de la entidad prestamo - salida
  */
 public class PrestamoResponseDTO {
 

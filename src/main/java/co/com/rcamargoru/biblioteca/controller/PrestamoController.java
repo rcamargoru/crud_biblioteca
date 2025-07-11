@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  *
  * @author Administrador
+ * controlador para ser llamado desde http para la gestión de prestamos
  */
 @RestController
 @RequestMapping("/api/prestamos")

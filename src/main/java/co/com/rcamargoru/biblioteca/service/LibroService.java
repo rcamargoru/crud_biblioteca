@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author Administrador
+ * Logica de app - Libro
  */
 @Service
 public class LibroService {

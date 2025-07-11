@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author Administrador
+ * Logica de app - genero
  */
 @Service
 public class GeneroService {

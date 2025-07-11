@@ -7,6 +7,7 @@ package co.com.rcamargoru.biblioteca.exception;
 /**
  *
  * @author Administrador
+ * Clase para el manejo de errores de no enocntrar
  */
 public class ResourceNotFoundException extends RuntimeException{
     

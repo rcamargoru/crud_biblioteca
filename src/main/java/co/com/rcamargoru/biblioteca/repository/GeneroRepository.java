@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * @author Administrador
+ * repostiorio para crud de genero
  */
 @Repository
 public interface GeneroRepository extends JpaRepository<Genero, Long>{

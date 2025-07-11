@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author Administrador
+ * Logica de app - Usuario
  */
 @Service
 public class UsuarioService {

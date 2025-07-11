@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * @author Administrador
+ * repostiorio para crud de autor
  */
 @Repository
 public interface AutorRepository extends JpaRepository<Autor, Long>{

@@ -7,6 +7,7 @@ package co.com.rcamargoru.biblioteca.dto;
 /**
  *
  * @author Administrador
+ * clase intermedia para no depender de la entidad libro - salida
  */
 public class LibroResponseDTO {
 

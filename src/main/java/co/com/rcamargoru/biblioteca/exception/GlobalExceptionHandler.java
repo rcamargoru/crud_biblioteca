@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 /**
  *
  * @author Administrador
+ * Clase para el manejo de errores
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {

@@ -7,6 +7,7 @@ package co.com.rcamargoru.biblioteca.model;
 /**
  *
  * @author Administrador
+ * Entidad Genero
  */
 import jakarta.persistence.*;
 

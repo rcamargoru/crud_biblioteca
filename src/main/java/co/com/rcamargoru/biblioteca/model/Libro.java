@@ -7,6 +7,7 @@ package co.com.rcamargoru.biblioteca.model;
 /**
  *
  * @author Administrador
+ * Entidad Libro
  */
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

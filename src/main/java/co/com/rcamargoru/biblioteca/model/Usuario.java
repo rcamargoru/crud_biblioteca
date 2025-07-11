@@ -14,6 +14,7 @@ import java.util.Date;
 /**
  *
  * @author Administrador
+ * Entidad Usuario
  */
 @Entity
 @Table(name = "usuario")

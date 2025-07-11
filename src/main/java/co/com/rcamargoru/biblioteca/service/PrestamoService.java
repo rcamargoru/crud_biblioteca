@@ -15,7 +15,9 @@ import co.com.rcamargoru.biblioteca.repository.PrestamoRepository;
 import co.com.rcamargoru.biblioteca.repository.UsuarioRepository;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author Administrador
+ * Logica de app - Prestamo
  */
 @Service
 public class PrestamoService {
@@ -39,6 +42,19 @@ public class PrestamoService {
 
     }
 
+    
+        public Map<Integer, Long> obtenerPrestamosPorMes(int anio) {
+        List<Object[]> resultados = prestamoRepository.contarPrestamosPorMes(anio);
+
+        Map<Integer, Long> prestamosPorMes = new HashMap<>();
+        for (Object[] fila : resultados) {
+            Integer mes = ((Number) fila[0]).intValue();
+            Long cantidad = ((Number) fila[1]).longValue();
+            prestamosPorMes.put(mes, cantidad);
+        }
+        return prestamosPorMes;
+    }
+    
     //Metodo para crear prestamo
     public PrestamoResponseDTO crearPrestamo(PrestamoRequestDTO request) {
         Prestamo nuevoPrestamo = new Prestamo();

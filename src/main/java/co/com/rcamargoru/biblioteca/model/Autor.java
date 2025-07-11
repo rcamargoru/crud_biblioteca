@@ -10,6 +10,7 @@ import java.util.Date;
 /**
  *
  * @author Administrador
+ * Entidad Autor
  */
 @Entity
 @Table(name = "autores")
